@@ -1,3 +1,4 @@
+
 const webpackConfig = require('./webpack.config.js');
 
 module.exports = function(config) {
@@ -12,16 +13,15 @@ module.exports = function(config) {
     exclude: [
     ],
     preprocessors: {
-      'src/*.js': ['webpack', 'sourcemap'],
-      'spec/*spec.js': ['webpack', 'sourcemap']
+      'src/*.js': ['webpack'],
+      'spec/*spec.js': ['webpack']
     },
     plugins: [
       'karma-jquery',
       'karma-webpack',
       'karma-jasmine',
       'karma-chrome-launcher',
-      'karma-jasmine-html-reporter',
-      'karma-sourcemap-loader'
+      'karma-jasmine-html-reporter'
     ],
     reporters: ['progress', 'kjhtml'],
     port: 9876,
